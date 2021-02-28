@@ -26,6 +26,17 @@
                     "category": "Sport",
                     "img_url": "https://images.pexels.com/photos/385997/pexels-photo-385997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     "price": 51}. In addition, you must add the user's token in headers: KEY = "auth-token", VALUE = your token. Afterwards, change the request to POST and past the link: https://meitar-shalom-api-toys.herokuapp.com/toys/</li>
+                    <li>To register: In Postman go to body->row->and write your user's details like the following example: {
+                        "name":"Moshe",
+                        "email":"moshe@abc.abc",
+                        "password":"1234"
+                    }. Afterwards, change the request to POST and past the link: https://meitar-shalom-api-toys.herokuapp.com/users/</li>
+                    <li>
+                        Registered useres can login and get their token by sending their email and password. In Postman go to body->row->and write your email and password like the following example: {
+                            "email":"moshe@abc.abc",
+                            "password":"1234"
+                        }. Afterwards, change the request to POST and past the link: https://meitar-shalom-api-toys.herokuapp.com/users/login
+                    </li>
                     
             </ul>
             <h3>PUT requests (you need to use Postman tool)</h3>
