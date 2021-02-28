@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Documentation</title>
+</head>
+<body class="bg-secondary text-white">
+    <div class="container-fluid">
+        <div class="container">
+            <h1 class="text-center">Meitar Shalom - Documentation</h1>
+            <h2 class="text-center mb-5">Server side project - creating API of toys store using MongoDB Atlas and Node JS</h2>
+            <h3>GET requests</h3>
+            <ul class="mb-5">
+                <li>Display all the documents of the toys' DB in json - link: http://localhost:3000/toys/</li>
+                <li>Search toys by name or info in the toys' DB by changing the query string "s" and switch pages by changing the query string "page" - for example: http://localhost:3000/toys/?s=<strong style="color:red; font-size: 1.5em; border-bottom: 2px solid red;">car</strong>&page=<strong style="color:red; font-size: 1.5em; border-bottom: 2px solid red;">0</strong>  (You can change "car" to any word and "0" to any number you want)</li>
+                <li>Search toys by category name, change "Here you can search" to any category you want - link: http://localhost:3000/toys/cat/<strong style="color:red; font-size: 1.5em; border-bottom: 2px solid red;">Here you can search</strong></li>
+                <li>Search toys by min price and max price in the toys' DB by changing the query strings "min" and "max" and switch pages by changing the query string "page" - for example: http://localhost:3000/toys/prices/?min=<strong style="color:red; font-size: 1.5em; border-bottom: 2px solid red;">5</strong>&max=<strong style="color:red; font-size: 1.5em; border-bottom: 2px solid red;">30</strong>&page=<strong style="color:red; font-size: 1.5em; border-bottom: 2px solid red;">0</strong>  (You can change "5" to different min price, change "30" to different max price and change "0" to any page number you want)</li>
+            </ul>
+            <h3>POST requests (you need to use Postman tool)</h3>
+            <ul class="mb-5">
+                <li>Only registered users can add their toys. In Postman go to body->row->json and write your toy details like the following example: {"name": "Bus Toy",
+                    "info": "A small model of bus, high quality",
+                    "category": "Sport",
+                    "img_url": "https://images.pexels.com/photos/385997/pexels-photo-385997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                    "price": 51}. img_url" isn't required but all the other are. In addition, you must add the user's token in headers: KEY = "auth-token", VALUE = your token. Afterwards, change the request to POST and past the link: http://localhost:3000/toys/</li>
+                    
+            </ul>
+            <h3>PUT requests (you need to use Postman tool)</h3>
+            <ul class="mb-5">
+                <li>To edit your toy, in Postman go to body->row->json and write your updated toy details like the following example: {
+                    "name": "Football",
+                    "info": "Professional football for professional players",
+                    "category": "Sport",
+                    "img_url": "https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                    "price": 50
+                }. img_url" isn't required but all the other are. In addition, you must add the user's token in headers: KEY = "auth-token", VALUE = your token. Afterwards, change the request to PUT and past the link with your item ID: http://localhost:3000/toys/<strong style="color:red; font-size: 1.5em; border-bottom: 2px solid red;">Here you write your item ID</strong></li>
+            </ul>
+            <h3>DELETE requests (you need to use Postman tool)</h3>
+            <ul>
+                <li>To delete your toy, you must add the user's token in headers: KEY = "auth-token", VALUE = your token. Afterwards, change the request to DELETE and past the link with your item ID: http://localhost:3000/toys/<strong style="color:red; font-size: 1.5em; border-bottom: 2px solid red;">Here you write your item ID</strong></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
