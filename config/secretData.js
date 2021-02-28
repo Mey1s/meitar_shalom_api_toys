@@ -1,5 +1,5 @@
 exports.config = {
-    jwtSecret: "",
-    mongoPass:"",
-    mongoUser:""
+    jwtSecret: "HeLlO",
+    mongoPass:"K49l02m4",
+    mongoUser:"mey"
 }
